@@ -38,4 +38,9 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+
+	require 'lib/domainredirect.rb'
+	# This is how you use and configure Rack::DomainRedirect middleware
+	config.middleware.use Rack::DomainRedirect, ['cheet.alinux.web.id', '192.168.0.177']
+
 end

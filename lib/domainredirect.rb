@@ -1,5 +1,4 @@
 module Rack
-  
   # Automatically redirects to the configurable domain
   #
   # If request comes from other than specified domains it redirects to the first

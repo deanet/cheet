@@ -1,17 +1,3 @@
-class ApplicationController
-  before_filter :ensure_domain
-
-  TheDomain = 'http://cheet.alinux.web.id'
-
-  def ensure_domain
-    if request.env['HTTP_HOST'] != TheDomain
-      redirect_to TheDomain
-    end
-  end
-end
-
-
-
 ActionController::Routing::Routes.draw do |map|
   map.resources :sheets, :collection => { :recent => :get }
   map.root :controller => 'sheets', :action => 'recent'
@@ -24,3 +10,4 @@ ActionController::Routing::Routes.draw do |map|
     # sheets.connect '/w/:id', :action => 'update', :conditions => { :method => :post }
   end
 end
+
