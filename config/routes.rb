@@ -1,9 +1,3 @@
-require  'domainredirect.rb'
-
-# This is how you use and configure Rack::DomainRedirect middleware
-use Rack::DomainRedirect, ['cheet.alinux.web.id', '192.168.0.177']
-
-
 ActionController::Routing::Routes.draw do |map|
   map.resources :sheets, :collection => { :recent => :get }
   map.root :controller => 'sheets', :action => 'recent'
