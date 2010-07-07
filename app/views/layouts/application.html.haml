@@ -7,10 +7,15 @@
     
   %body
     .container
-      %h1= link_to "Cheet alinux", root_path
+      %h1= link_to "Cheet alinux.web.id", root_path
 
       - flash.each do |key, value|
         %div{:class => key}= value
 
       #content
         = yield
+
+    .footer
+      %div
+	Maintenance and Developing by <a href="http://stuff.deanet.web.id" target="_new">stuff.deanet.web.id</a>
+	copyleft - 2010
